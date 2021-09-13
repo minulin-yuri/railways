@@ -4,11 +4,10 @@
 //получаем ширину слайдера
 const offset = document.querySelector('.slider').offsetWidth;
 //получаем кнопки
-const btnPrev = document.querySelector('.prev-slide');
-const btnNext = document.querySelector('.next-slide');
+const btnPrev = document.querySelectorAll('.prev-slide');
+const btnNext = document.querySelectorAll('.next-slide');
 //получаем блок с слайдами
 const slider = document.querySelectorAll('.slide__item');
-console.log(slider);
 //определяем номер слайда
 let viewSlide = 0;
 
@@ -54,12 +53,13 @@ const prevSlide = () => {
     });
 }
 
-//отображение следующего слайда через 5 сек
-const interval = setInterval(nextSlide, 5000);
-
 //слушаем событие клика на кнопках
-btnNext.addEventListener('click', nextSlide);
-btnPrev.addEventListener('click', prevSlide);
+btnNext.forEach((item) => {
+    item.addEventListener('click', nextSlide);
+});
+btnPrev.forEach((item) => {
+    item.addEventListener('click', prevSlide);
+});
 
 
 

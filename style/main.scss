@@ -56,16 +56,21 @@ textarea:focus {
 }
 
 button {
-    background: $orange;
     border: none;
     outline: none;
     border-radius: 23.5px;
     @include fontGeometria-style(16px, 20px, bold);
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    background: $orange;
     color: $white;
     height: 50px;
     transition: all .5s, box-shadow 1s;
+}
+
+button::before {
+    background: $orange;
+    color: $white;
 }
 
 button:hover {
@@ -75,8 +80,6 @@ button:hover {
 }
 
 
-
-
 h2 {
     @include fontGeometria-style(35px, 44px, 500);
     color: $dark-blue;
@@ -84,6 +87,10 @@ h2 {
 
 h3 {
     @include fontGeometria-style(22px, 28px, 500);
+}
+
+.content {
+    min-height: calc(100vh - 93px);
 }
 
 .container {
@@ -96,7 +103,7 @@ h3 {
     left: 0;
     top: 0;
     background: $white;
-    width: 100%;
+    width: 100vw;
     z-index: 99;
 
     &__container {
@@ -108,6 +115,7 @@ h3 {
 
     &__menu {
         height: 100%;
+        margin: 0 90px 0 0;
     }
 
     &__phone {
@@ -117,6 +125,7 @@ h3 {
         & span {
             @include fontGeometria-style(22px, 28px, 500);
             margin: 0 0 0 10px;
+            white-space: nowrap;
         }
 
         &:hover {
@@ -124,6 +133,9 @@ h3 {
                 animation: ring .5s;
             }
         }
+    }
+    &__burger {
+        display: none;
     }
 }
 
@@ -174,7 +186,6 @@ h3 {
     height: 90px;
 
     &__link {
-
         @include fontGeometria-style(12px, 15px);
         text-transform: uppercase;
         color: $dark-blue;
@@ -201,7 +212,7 @@ h3 {
 }
 
 .intro {
-    width: 100%;
+    width: 100vw;
     min-height: 578px;
     background: url('./../images/intro_background.png') no-repeat center;
     background-size: cover;    
@@ -228,16 +239,16 @@ h3 {
 }
 
 .application {
+    margin: -167px 0 0;
 
     &__container {
-        margin: -167px auto 0;
+        margin: 0;
         background: url('./../images/application_background.png') no-repeat;
         background-position: center;
-        width: 100%;
-        height: 100%;
-        padding: 34px 72px 47px 73px;
+        background-size: 110% 120%;      
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+        padding: 34px 72px 47px 73px;
 
         & span {
             color: $blue;
@@ -250,7 +261,7 @@ h3 {
 
     &__form {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between;        
     }
 
     &__button {
@@ -271,22 +282,33 @@ h3 {
 }
 
 .geography {
-    width: 100%;   
-
+    width: 100vw; 
+    
     &__container {
+        width: 100%;
+        display: flex;
+        margin: 69px auto 60px;
+    }
+
+    &__map {
+        width: 60%;
+        min-height: 455px;
+        background: url('./../images/russia.png') no-repeat;
+        background-size: 110%;
+        background-position: center;
+    }
+
+    &__content {
+        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         color: $dark-blue;
-        background: url('./../images/russia.png') no-repeat;
-        background-position-x: right;
-        background-position-y: center;
-        background-size: auto 110%;
-        margin: 69px auto 64px;
+        padding: 25px 0 0;
     }
 
     &__header {
-        margin: 25px 0 23px;       
+        margin: 0 0 23px;       
     }
 
     &__desc {
@@ -298,12 +320,13 @@ h3 {
     &__text {
         max-width: 484px;
         @include fontGeometria-style(16px, 156%);
+        color: rgba(0, 26, 51, 0.7);
         margin: 0 0 20px;
     }
 }
 
 .portfolio {
-    width: 100%;
+    width: 100vw;
     background: $background-grey;
 
     &__container {
@@ -320,8 +343,11 @@ h3 {
     &__slider {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        left: 0;                
+        justify-content: space-between; 
+        
+        & .slider__nav {
+            display: none;
+        }
     }
 
     &__btn {
@@ -386,11 +412,19 @@ h3 {
         }
     }
 
+    &__img {
+        background: url('./../images/portfolio_foto.png');
+        width: 408px;
+        height: 540px;
+    }
+
     &__text {
         background: $blue;
         width: 647px;
         padding: 40px 30px 83px;
         color: $white;
+        display: flex;
+        flex-direction: column;
 
         &_header {
             margin: 0 0 9px;
@@ -425,7 +459,7 @@ h3 {
 }
 
 .benefits {
-    width: 100%;
+    width: 100vw;
     background: $white;
 
     &__container {
@@ -486,7 +520,7 @@ h3 {
 }
 
 .about {
-    width: 100%;
+    width: 100vw;
     background: $background-grey;
 
     &__container {
@@ -521,8 +555,12 @@ h3 {
         }
     }
 
-    &__discharges img{
-        margin: 0 23px 0 0;
+    &__discharges {
+        display: flex;
+
+        & img{
+            margin: 0 23px 0 0;
+        }
     }
 
     &__img {
@@ -534,7 +572,7 @@ h3 {
 }
 
 .contacts {
-    width: 100%;
+    width: 100vw;
     background: $blue;
 
     &__container {
@@ -610,23 +648,24 @@ h3 {
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin: -95px 0 60px 148px;
-        padding: 40px 0 0 76px;
+        padding: 40px 57px 43px 76px;
 
         &__title {
             margin: 0 0 21px;
         }
 
         &__form {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px 29px;
+        }
 
-            &_left {
-                margin: 0 29px 0 0;
-            }
+        &__comments {
+            grid-column: 2 / 3;
+            grid-row: 1 /  4;
         }
 
         &__input {
-            margin: 0 0 10px;
-
             & input {
                 background: $light-grey;
             }
@@ -635,7 +674,19 @@ h3 {
         &__check {
             position:relative;
             padding: 0 0 0 20px;
-            margin: 23px 0 0;  
+            margin: 12px 0 0; 
+            
+            & .checkbox-content {
+                border-radius: 1px;
+                width:6px;
+                height:6px;
+                background-color:$blue;
+                position: absolute;
+                left: 0;
+                margin: 7px 0 0 3px;
+                z-index: 10;
+                display: none;
+            }
             
             & label {
                 @include fontGeometria-style(12px, 15px);
@@ -664,34 +715,23 @@ h3 {
             display: none;
         }
 
-        &__checkbox:checked + label:after {
-            outline:2px solid $light-grey;
-            // border:2px solid $light-grey;
-            
-            border-radius: 1px;
-            width:6px;
-            height:6px;
-            background-color:$blue;
-            box-shadow: 0px 0px 0px 3px $light-grey;
-            margin: 3px 0 0 3px;
-        }
-
         &__comment {
             background: $light-grey;
             width: 278px;
             height: 195px;
             resize: none;
-            margin: 0 0 22px;
         }
 
         &__button {
             width: 278px;
+            margin: 12px 0 0;
         }
     }
 }
 
 .footer {
-    width: 100%;
+    width: 100vw;
+    height: 93px;
     background: $dark-blue;
 
     &__container {

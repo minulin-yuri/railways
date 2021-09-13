@@ -92,7 +92,6 @@ textarea:focus {
 }
 
 button {
-  background: #FD6612;
   border: none;
   outline: none;
   border-radius: 23.5px;
@@ -103,12 +102,18 @@ button {
   font-family: 'Geometria', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  background: #FD6612;
   color: #ffffff;
   height: 50px;
   -webkit-transition: all .5s, -webkit-box-shadow 1s;
   transition: all .5s, -webkit-box-shadow 1s;
   transition: all .5s, box-shadow 1s;
   transition: all .5s, box-shadow 1s, -webkit-box-shadow 1s;
+}
+
+button::before {
+  background: #FD6612;
+  color: #ffffff;
 }
 
 button:hover {
@@ -135,6 +140,10 @@ h3 {
   font-family: 'Geometria', sans-serif;
 }
 
+.content {
+  min-height: calc(100vh - 93px);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -145,7 +154,7 @@ h3 {
   left: 0;
   top: 0;
   background: #ffffff;
-  width: 100%;
+  width: 100vw;
   z-index: 99;
 }
 
@@ -164,6 +173,7 @@ h3 {
 
 .header__menu {
   height: 100%;
+  margin: 0 90px 0 0;
 }
 
 .header__phone {
@@ -182,11 +192,16 @@ h3 {
   font-weight: 500;
   font-family: 'Geometria', sans-serif;
   margin: 0 0 0 10px;
+  white-space: nowrap;
 }
 
 .header__phone:hover svg {
   -webkit-animation: ring .5s;
           animation: ring .5s;
+}
+
+.header__burger {
+  display: none;
 }
 
 @-webkit-keyframes ring {
@@ -309,7 +324,7 @@ h3 {
 }
 
 .intro {
-  width: 100%;
+  width: 100vw;
   min-height: 578px;
   background: url("./../images/intro_background.png") no-repeat center;
   background-size: cover;
@@ -350,16 +365,19 @@ h3 {
   max-width: 585px;
 }
 
+.application {
+  margin: -167px 0 0;
+}
+
 .application__container {
-  margin: -167px auto 0;
+  margin: 0;
   background: url("./../images/application_background.png") no-repeat;
   background-position: center;
-  width: 100%;
-  height: 100%;
-  padding: 34px 72px 47px 73px;
+  background-size: 110% 120%;
   -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  padding: 34px 72px 47px 73px;
 }
 
 .application__container span {
@@ -407,10 +425,27 @@ h3 {
 }
 
 .geography {
-  width: 100%;
+  width: 100vw;
 }
 
 .geography__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 60px;
+}
+
+.geography__map {
+  width: 60%;
+  min-height: 455px;
+  background: url("./../images/russia.png") no-repeat;
+  background-size: 110%;
+  background-position: center;
+}
+
+.geography__content {
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,15 +457,11 @@ h3 {
       -ms-flex-align: start;
           align-items: flex-start;
   color: #001A33;
-  background: url("./../images/russia.png") no-repeat;
-  background-position-x: right;
-  background-position-y: center;
-  background-size: auto 110%;
-  margin: 69px auto 64px;
+  padding: 25px 0 0;
 }
 
 .geography__header {
-  margin: 25px 0 23px;
+  margin: 0 0 23px;
 }
 
 .geography__desc {
@@ -450,11 +481,12 @@ h3 {
   font-style: normal;
   font-weight: normal;
   font-family: 'Geometria', sans-serif;
+  color: rgba(0, 26, 51, 0.7);
   margin: 0 0 20px;
 }
 
 .portfolio {
-  width: 100%;
+  width: 100vw;
   background: #F4F8FF;
 }
 
@@ -486,7 +518,10 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  left: 0;
+}
+
+.portfolio__slider .slider__nav {
+  display: none;
 }
 
 .portfolio__btn {
@@ -564,11 +599,24 @@ h3 {
   }
 }
 
+.slide__img {
+  background: url("./../images/portfolio_foto.png");
+  width: 408px;
+  height: 540px;
+}
+
 .slide__text {
   background: #4169C1;
   width: 647px;
   padding: 40px 30px 83px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .slide__text_header {
@@ -618,7 +666,7 @@ h3 {
 }
 
 .benefits {
-  width: 100%;
+  width: 100vw;
   background: #ffffff;
 }
 
@@ -694,7 +742,7 @@ h3 {
 }
 
 .about {
-  width: 100%;
+  width: 100vw;
   background: #F4F8FF;
 }
 
@@ -738,6 +786,12 @@ h3 {
   margin: 0 0 15px;
 }
 
+.about__discharges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .about__discharges img {
   margin: 0 23px 0 0;
 }
@@ -750,7 +804,7 @@ h3 {
 }
 
 .contacts {
-  width: 100%;
+  width: 100vw;
   background: #4169C1;
 }
 
@@ -870,7 +924,7 @@ h3 {
           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: -95px 0 60px 148px;
-  padding: 40px 0 0 76px;
+  padding: 40px 57px 43px 76px;
 }
 
 .contacts .feedback__title {
@@ -878,17 +932,20 @@ h3 {
 }
 
 .contacts .feedback__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 29px;
 }
 
-.contacts .feedback__form_left {
-  margin: 0 29px 0 0;
-}
-
-.contacts .feedback__input {
-  margin: 0 0 10px;
+.contacts .feedback__comments {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 /  4;
 }
 
 .contacts .feedback__input input {
@@ -898,7 +955,19 @@ h3 {
 .contacts .feedback__check {
   position: relative;
   padding: 0 0 0 20px;
-  margin: 23px 0 0;
+  margin: 12px 0 0;
+}
+
+.contacts .feedback__check .checkbox-content {
+  border-radius: 1px;
+  width: 6px;
+  height: 6px;
+  background-color: #4169C1;
+  position: absolute;
+  left: 0;
+  margin: 7px 0 0 3px;
+  z-index: 10;
+  display: none;
 }
 
 .contacts .feedback__check label {
@@ -932,31 +1001,21 @@ h3 {
   display: none;
 }
 
-.contacts .feedback__checkbox:checked + label:after {
-  outline: 2px solid #EEF2F9;
-  border-radius: 1px;
-  width: 6px;
-  height: 6px;
-  background-color: #4169C1;
-  -webkit-box-shadow: 0px 0px 0px 3px #EEF2F9;
-          box-shadow: 0px 0px 0px 3px #EEF2F9;
-  margin: 3px 0 0 3px;
-}
-
 .contacts .feedback__comment {
   background: #EEF2F9;
   width: 278px;
   height: 195px;
   resize: none;
-  margin: 0 0 22px;
 }
 
 .contacts .feedback__button {
   width: 278px;
+  margin: 12px 0 0;
 }
 
 .footer {
-  width: 100%;
+  width: 100vw;
+  height: 93px;
   background: #001A33;
 }
 

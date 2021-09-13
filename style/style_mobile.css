@@ -1,0 +1,236 @@
+@media screen and (max-width: 660px) {
+  .about__text p {
+    font-size: 14px;
+    line-height: 156%;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Geometria', sans-serif;
+  }
+  .contacts__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts__list_item h4 {
+    margin: 0 21px 0 0;
+  }
+  .contacts__social {
+    margin: 0 0 36px;
+  }
+  .contacts .feedback {
+    width: 100vw;
+    margin: 0 0 0 -40px;
+    padding: 30px 40px 31px;
+  }
+  .contacts .feedback__input input,
+  .contacts .feedback__input textarea {
+    width: 100%;
+  }
+  .contacts .feedback button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header_right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header__phone {
+    display: none;
+  }
+  .header__burger {
+    margin: 0;
+  }
+  .intro__title {
+    font-size: 30px;
+    line-height: 38px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Geometria', sans-serif;
+  }
+  .intro__text {
+    font-size: 16px;
+    line-height: 156%;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Geometria', sans-serif;
+    margin: 0 40px 0;
+  }
+  .slide__text {
+    padding: 30px 30px 32px;
+  }
+  .about__text {
+    padding: 42px 30px 0 31px;
+    min-height: 660px;
+    background-size: auto 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .portfolio__btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 26px;
+    line-height: 33px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Geometria', sans-serif;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Geometria', sans-serif;
+  }
+  .container {
+    padding: 0 10px 0;
+  }
+  .header__container {
+    min-height: 70px;
+  }
+  .intro__title {
+    margin: 120px 0 15px 0;
+  }
+  .intro__text {
+    margin: 0;
+  }
+  .application__container {
+    margin: -335px auto 0;
+    padding: 33px 30px 34px;
+  }
+  .geography__container {
+    margin: 25px auto 26px;
+  }
+  .geography__map {
+    min-height: 217px;
+    margin: 0 -23px 0;
+  }
+  .geography__desc {
+    font-size: 18px;
+    line-height: 150%;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Geometria', sans-serif;
+  }
+  .portfolio__container {
+    padding: 47px 0 50px;
+  }
+  .portfolio__title {
+    margin: 0 0 20px;
+  }
+  .portfolio__slider {
+    width: calc(100vw - 20px);
+  }
+  .portfolio__slider .slider__nav {
+    margin: 10px 0 0;
+  }
+  .slide {
+    width: calc(100vw - 20px);
+    min-height: 660px;
+  }
+  .slide__img {
+    height: 220px;
+    min-height: 220px;
+    background-size: 100%;
+  }
+  .slide__text_list {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .benefits__container {
+    padding: 66px 30px 50px 10px;
+  }
+  .benefits__list {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .benefits__item_2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 /  4;
+  }
+  .benefits__item_3 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 /  6;
+  }
+  .benefits__text h3 {
+    font-weight: 500;
+    margin: 14px 0 0;
+  }
+  .benefits__list {
+    grid-gap: 42px;
+  }
+  .about__container {
+    padding: 62px 10px 65px;
+  }
+  .about__img img {
+    min-height: 250px;
+  }
+  .contacts__container {
+    padding: 57px 10px 0;
+  }
+  .contacts__title {
+    margin: 0 0 28px;
+  }
+  .contacts__list {
+    margin: 0 0 28px;
+  }
+  .contacts h4 {
+    margin: 0 0 27px;
+  }
+  .contacts .feedback {
+    margin: 0 0 -16px -10px;
+    padding: 30px 40px 31px;
+  }
+  .contacts .feedback__title {
+    font-size: 22px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Geometria', sans-serif;
+    text-align: center;
+  }
+  .footer__container {
+    padding: 38px 0 34px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__container h4 {
+    margin: 0 0 38px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .slide__img {
+    background-size: auto 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about__discharges img {
+    width: 110px;
+    height: 155px;
+    margin: 0 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .slide__text {
+    padding: 30px 10px 32px;
+  }
+}
+/*# sourceMappingURL=style_mobile.css.map */

@@ -1,0 +1,393 @@
+@import 'mixins';
+@import 'variables';
+
+@media screen and (max-width: 1220px){
+
+    .container {
+        width: 100vw;
+        padding: 0 40px 0;
+    }
+
+    .header {
+        &__menu {
+            margin: 0;
+        }
+    }
+
+    .intro {
+        min-height: 757px;
+
+        &__text {
+            margin: 0 80px 0;
+        }
+    }
+
+    .application {
+        &__container {
+            min-height: 454px;
+            // background-size: cover;
+            margin: -335px auto 0; 
+            background-size: 110% 120%; 
+            padding: 38px 60px 53px;          
+        }
+
+        &__form {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            
+        }
+
+        & .input-group {
+            width: 100%;
+            margin: 0 0 16px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .portfolio {
+    
+        &__container {
+            padding: 59px 0 36px;
+        }
+
+        &__title {
+            margin: 0 0 51px;
+        }
+
+        &__slider {
+            flex-direction: column;
+            width: calc(100vw - 80px); 
+            
+            & .side-nav {
+                display: none;
+            }
+
+            & .slider__nav {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin: 40px 0 0;
+            }
+        }
+        
+        &__btn {
+            margin: 27px 0 0;
+        }
+    }
+
+    .slider {
+        max-width: none;
+    }
+
+    .slide {
+        min-height: 760px;
+        width: calc(100vw - 80px); 
+
+        &__item {
+            flex-direction: column;
+            height: 760px;
+            width: 100%;
+        }
+
+        &__img {
+            background: url('./../images/portfolio_foto_horiz.png') no-repeat;
+            width:100% ;
+            min-height: 340px;
+            background-size: 100%;
+            background-position-x: center;
+        }
+
+        &__text {
+            width: 100%;
+            min-height: 420px;
+            padding: 43px 61px 52px;
+        }
+    }
+
+    .benefits {
+        &__container {
+            padding: 70px 40px 84px;
+        }
+
+        &__title {
+            margin: 0 0 50px;
+        }
+    }
+
+    .about {
+        &__container {
+            padding: 70px 40px;
+        }
+    }
+
+    .contacts {
+        &__container {
+            padding: 49px 40px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title {
+            margin: 0 0 30px;
+        }
+
+        &__list {
+            margin: 0 0 50px;
+        }
+
+        & .feedback {
+            width: 360px;
+            height: 592px;
+            margin: 0 0 -125px;
+            padding: 30px 42px 23px 40px;
+
+            &__form {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__comments {
+                grid-column: 1 / 2;
+                grid-row: 4 / 7;
+            }
+
+            &__button {
+                grid-row: 7 / 8;
+                margin: 0;
+            }
+
+            &__check {
+                margin: 0;
+            }
+
+            &__comment {
+                height: 143px;
+            }
+        }
+        &__social {
+            margin: 45px 0 45px;
+        }
+        
+    }
+
+    .footer {
+        height: 180px;
+
+        &__container {
+            padding: 38px 0 42px 40px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            & h4 {
+                margin: 0 0 46px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .top-menu {
+        &__link {
+            padding: 37px 15px 38px;
+        }
+    }
+
+    .about {
+        &__desc {
+            flex-direction: column;
+        }
+
+        &__img {
+            position: inherit;
+            width: 100vw;
+            margin: -142px 0 0;
+
+            & img {
+                width: 100%;
+                min-height: 390px;
+            }
+        }
+
+        &__text {
+            max-width: none;
+            width: 100%;
+            min-height: 588px;
+            background-size: 100%;
+            padding: 53px 59px 48px;
+
+            & p {
+                max-width: 90%;
+                margin: 0 0 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .top-menu {
+        &__link {
+            padding: 37px 10px 38px;
+        }
+    }
+
+    .benefits {
+        &__container {
+            padding: 70px 40px 84px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            flex-direction: column;
+
+            &_1 {
+                grid-column: 1 / 2;
+                grid-row: 1 /  2;
+            }
+
+            &_2 {
+                grid-column: 1 / 2;
+                grid-row: 2 /  3;
+            }
+
+            &_3 {
+                grid-column: 1 / 2;
+                grid-row: 3 /  4;
+            }
+        }
+
+        &__text {
+            & h3 {
+                margin: 11px 0 0;
+            }
+
+            & p {
+                max-width: none;
+            }
+        }
+
+        &__list {
+            grid-gap: 60px 41px;
+        }
+
+        &__title {
+            margin: 0 0 27px;
+        }
+    }
+}
+
+@media screen and (max-width: 960px){
+
+    h2 {
+        @include fontGeometria-style(30px, 38px, 500);
+    }
+
+    .header {
+        &__menu {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+            margin: 0 0 0 50px;
+        }
+
+        &__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .intro {
+        &__title {
+            @include fontGeometria-style(38px, 48px, bold);
+            margin: 166px 0 6px 0;
+        }
+    }
+
+    .geography {
+        &__container {
+            flex-direction: column;
+            margin: 49px auto 38px;
+        }
+
+        &__map {
+            width: 100%;
+            background-size: 100% 110%;
+            // background-size: cover;
+            margin: 0 0 0 -24px;
+            min-height: 405px;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__desc {
+            @include fontGeometria-style(20px, 151%);
+            margin: 0 0 19px;
+        }
+
+        &__text {
+            // max-width: none;
+            margin: 0 0 10px;
+        }
+    }
+
+    .slide {
+        &__text {
+            &_desc {
+                margin: 0 0 19px;
+            }
+
+            &_list {
+                grid-gap: 11px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    .slide {
+        &__img {
+            background-size: auto 100%;
+        }
+    }
+
+    .about {
+        &__text {
+            & p {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .contacts {
+        &__list {
+            &_item {
+                & h4 {
+                    width: 85px;
+                }
+            }
+        }
+
+        & .feedback {
+            width: 340px;
+            height: 592px;
+            margin: 0 0 -125px;
+            padding: 30px 30px 23px 30px;
+        }
+    }
+}

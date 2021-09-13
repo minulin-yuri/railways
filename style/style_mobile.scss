@@ -1,0 +1,300 @@
+@import 'mixins';
+@import 'variables';
+
+@media screen and (max-width: 660px){
+    .about {
+        &__text {
+            & p {
+                @include fontGeometria-style(14px, 156%);
+            }
+        }
+    }
+
+    .contacts {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__list {
+            &_item {
+                & h4 {
+                    margin: 0 21px 0 0;
+                }
+            }
+        }
+
+        &__social {
+            margin: 0 0 36px;
+        }
+
+        & .feedback {
+            width: 100vw;
+            margin: 0 0 0 -40px;
+            padding: 30px 40px 31px;
+
+            &__input {
+                & input,
+                & textarea {
+                    width: 100%;
+                }
+            }
+
+            & button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px){
+    
+    .header {
+        &_right {
+           justify-content: flex-end; 
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &__burger {
+            margin: 0;
+        }
+    }
+
+    .intro {
+
+        &__title {
+            @include fontGeometria-style(30px, 38px, bold);
+        }
+
+        &__text {
+            @include fontGeometria-style(16px, 156%);
+            margin: 0 40px 0;
+        }
+    }
+
+    .slide__text {
+        padding: 30px 30px 32px;
+    }
+
+    .about {
+        &__text {
+            padding: 42px 30px 0 31px;
+            min-height: 660px;
+            background-size: auto 100%;
+        } 
+    }
+}
+
+@media screen and (max-width: 550px){
+    .portfolio {
+        &__btn {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    h2 {
+        @include fontGeometria-style(26px, 33px, 500);
+    }
+
+    h3 {
+        @include fontGeometria-style(20px, 25px);
+    }
+    
+    .container {
+        padding: 0 10px 0;
+    }
+    
+    .header {
+        &__container {
+            min-height: 70px;
+        }
+    }
+
+    .intro {
+
+        &__title {
+            margin: 120px 0 15px 0;
+        }
+
+        &__text {
+            margin: 0;
+        }
+    }
+
+    .application {
+        &__container {
+            // min-height: 454px;
+            // background-size: 100% 100%;
+            margin: -335px auto 0;
+            padding: 33px 30px 34px;
+        }
+    }
+
+    .geography {
+        &__container {
+            margin: 25px auto 26px;
+        }
+
+        &__map {
+            min-height: 217px;
+            margin: 0 -23px 0;
+        }
+
+        &__desc {
+            @include fontGeometria-style(18px, 150%);
+        }
+    }
+
+    .portfolio {
+    
+        &__container {
+            padding: 47px 0 50px;
+        }
+
+        &__title {
+            margin: 0 0 20px;
+        }
+
+        &__slider {
+            width: calc(100vw - 20px);
+
+            & .slider__nav {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    .slide {
+        // height: 720px;
+        width: calc(100vw - 20px);
+        min-height: 660px;
+
+        &__img {
+            height: 220px;
+            min-height: 220px;
+            background-size: 100%;
+        }
+
+        &__text {
+            &_list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    .benefits {
+        &__container {
+            padding: 66px 30px 50px 10px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__item {
+
+            &_2 {
+                grid-row: 3 /  4;
+            }
+
+            &_3 {
+                grid-row: 5 /  6;
+            }
+        }
+
+        &__text {
+            & h3 {
+                font-weight: 500;
+                margin: 14px 0 0;
+            }
+        }
+
+        &__list {
+            grid-gap: 42px;
+        }
+    }
+
+    .about {
+        &__container {
+            padding: 62px 10px 65px;
+        }
+
+        &__img {
+            & img {
+                min-height: 250px;
+            }
+        }
+    }
+
+    .contacts {
+        &__container {
+            padding: 57px 10px 0;
+        }
+
+        &__title {
+            margin: 0 0 28px;
+        }
+
+        &__list {
+            margin: 0 0 28px;
+        }
+
+        & h4 {
+            margin: 0 0 27px;
+        }
+
+        & .feedback {
+            margin: 0 0 -16px -10px;
+            padding: 30px 40px 31px;
+
+            &__title {
+                @include fontGeometria-style(22px, 28px, 500);
+                text-align: center;
+            }
+        }
+    }
+
+    .footer {
+
+        &__container {
+            padding: 38px 0 34px 10px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            & h4 {
+                margin: 0 0 38px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .slide {
+        &__img {
+            background-size: auto 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .about {
+        &__discharges img {
+            width: 110px;
+            height: 155px;
+            margin: 0 20px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 360px){
+    .slide{
+        &__text {
+            padding: 30px 10px 32px;
+        }
+    }
+}
